@@ -1,0 +1,29 @@
+{
+  "name": "@uzufly/‹new-astro-repo›",
+  "description": "‹describe the Astro publication›",
+  "author": "Uzufly (https://uzufly.com)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.0.13"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "homepage": "https://github.com/uzufly/‹new-astro-repo›#readme",
+  "bugs": {
+    "url": "https://github.com/uzufly/‹new-astro-repo›/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh@github.com:uzufly/‹new-astro-repo›.git"
+  }
+}
