@@ -16,9 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@astrojs/lit": "^3.0.3",
     "@astrojs/vercel": "^5.2.0",
-    "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^3.5.5",
     "lit": "^2.8.0"
   },
