@@ -8,8 +8,9 @@ dist/
 # Astro generated types
 .astro/
 
-# Vercel deployment
+# Deployment targets
 .vercel
+.netlify
 
 # NPM dependencies
 node_modules/
