@@ -6,7 +6,7 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "format": "prettier \"src/**/*.{astro,js,html,css}\" --write",
+    "format": "prettier \"src/**/*.{astro,js,html,css}\" --list-different --write",
     "lint": "eslint src --ext .js,.astro",
     "dev": "astro dev",
     "start": "astro dev",
