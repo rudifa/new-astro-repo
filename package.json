@@ -1,10 +1,14 @@
 {
+  "version": "0.1.0",
   "name": "@uzufly/‹new-astro-repo›",
   "description": "‹describe the Astro publication›",
   "author": "Uzufly (https://uzufly.com)",
   "license": "Apache-2.0",
   "type": "module",
-  "version": "1.0.0",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "format": "prettier \"src/**/*.{astro,js,html,css}\" --list-different --write",
     "lint": "eslint src --ext .js,.astro",
@@ -29,15 +33,15 @@
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   },
-  "publishConfig": {
-    "access": "restricted"
-  },
+  "keywords": [
+    "uzufly"
+  ],
   "homepage": "https://github.com/uzufly/‹new-astro-repo›#readme",
   "bugs": {
     "url": "https://github.com/uzufly/‹new-astro-repo›/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:uzufly/‹new-astro-repo›.git"
+    "url": "git+ssh://git@github.com/uzufly/‹new-astro-repo›.git"
   }
 }
