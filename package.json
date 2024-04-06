@@ -10,8 +10,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "format": "prettier \"src/**/*.{astro,js,html,css}\" --list-different --write",
-    "lint": "eslint src --ext .js,.astro",
+    "format": "prettier \"src/**/*.{astro,js,html,css,mdx}\" --list-different --write",
+    "lint": "eslint \"src/**/*.{astro,js,ts}\"",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
