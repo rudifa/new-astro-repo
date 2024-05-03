@@ -67,4 +67,4 @@ Check the [documentation of Astro](https://docs.astro.build) or jump into our [D
 
 ## License
 
-Distributed under the Apache-2.0 license. See LICENSE for details.
+Distributed under the Apache-2.0 license. See [LICENSE](LICENSE) for details.
