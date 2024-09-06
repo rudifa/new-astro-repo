@@ -10,6 +10,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
+    "clean": "del-cli .astro .vercel node_modules/{.astro,.vite}",
     "format": "prettier \"src/**/*.{astro,js,html,css,mdx}\" --list-different --write",
     "lint": "eslint \"src/**/*.{astro,js,ts}\"",
     "dev": "astro dev",
@@ -27,6 +28,7 @@
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
     "@typescript-eslint/parser": "^7.4.0",
+    "del-cli": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
