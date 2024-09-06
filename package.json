@@ -20,8 +20,8 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@astrojs/vercel": "^7.5.0",
-    "astro": "^4.5.12"
+    "@astrojs/vercel": "^7.8.0",
+    "astro": "^4.15.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
