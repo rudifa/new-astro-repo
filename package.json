@@ -11,6 +11,7 @@
   },
   "scripts": {
     "clean": "del-cli .astro .vercel node_modules/{.astro,.vite}",
+    "deploy": "curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_‹vercel-project›/‹vercel-deploy-hook-token›",
     "format": "prettier \"src/**/*.{astro,js,html,css,mdx}\" --list-different --write",
     "lint": "eslint \"src/**/*.{astro,js,ts}\"",
     "dev": "astro dev",
