@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@astrojs/vercel": "^7.8.1",
-    "astro": "^4.15.5"
+    "astro": "^4.15.12"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
