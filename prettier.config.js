@@ -1,5 +1,6 @@
-/** @type {import("prettier").Config} */
+/* eslint-env node */
 
+/** @type {import("prettier").Config} */
 export default {
   plugins: ['prettier-plugin-astro'],
   overrides: [
