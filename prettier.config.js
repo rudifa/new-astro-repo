@@ -1,14 +1,5 @@
 /* eslint-env node */
 
-/** @type {import("prettier").Config} */
-export default {
-  plugins: ['prettier-plugin-astro'],
-  overrides: [
-    {
-      files: '*.astro',
-      options: {
-        parser: 'astro',
-      },
-    },
-  ],
-};
+import { default as prettier } from "@uzufly/with-prettier-config";
+
+export default prettier;

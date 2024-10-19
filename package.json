@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "del-cli .astro .vercel node_modules/{.astro,.vite}",
     "deploy": "curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_‹vercel-project›/‹vercel-deploy-hook-token›",
-    "format": "prettier \"src/**/*.{astro,js,html,css,mdx}\" --list-different --write",
+    "format": "prettier \"src/**/*.{astro,js,ts,html,css,mdx}\" --list-different --write",
     "lint": "eslint \"src/**/*.{astro,js,ts}\"",
     "dev": "astro dev",
     "start": "astro dev",
@@ -29,12 +29,12 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@uzufly/with-eslint-config": "^0.3.0",
+    "@uzufly/with-prettier-config": "^0.1.0",
     "del-cli": "^6.0.0",
     "eslint": "^9.12.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier": "^3.3.3"
   },
   "keywords": [
     "uzufly"
