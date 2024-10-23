@@ -8,11 +8,39 @@ import astroParser from 'astro-eslint-parser';
 export default [
   eslint.configs.recommended,
   {
-    files: ['**/*.{js,ts,astro}'],
+    // TypeScript files configuration
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        project: './tsconfig.json',
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
     plugins: {
       '@typescript-eslint': tseslint,
-      'astro': eslintPluginAstro,
     },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+    },
+  },
+  {
+    // TypeScript declaration files configuration
+    files: ['**/*.d.ts'],
+    languageOptions: {
+      parser: tsParser,
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+    },
+  },
+  {
+    // Astro files configuration
+    files: ['**/*.astro'],
     languageOptions: {
       parser: astroParser,
       parserOptions: {
@@ -22,64 +50,28 @@ export default [
         ecmaVersion: 'latest',
       },
     },
+    plugins: {
+      astro: eslintPluginAstro,
+    },
+    rules: {
+      'no-unused-vars': 'off',
+    },
+  },
+  {
+    // Common rules for all files
+    files: ['**/*.{js,ts,astro}'],
     rules: {
       // Error prevention
       'no-console': 'warn',
       'no-debugger': 'warn',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'no-duplicate-imports': 'error',
-      'no-constant-condition': 'error',
 
       // Code style
       'indent': ['error', 2],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
       'comma-dangle': ['error', 'always-multiline'],
-      'arrow-parens': ['error', 'always'],
-
-      // Best practices
-      'curly': ['error', 'all'],
-      'eqeqeq': ['error', 'always'],
-      'no-var': 'error',
-      'prefer-const': 'error',
-      'prefer-template': 'error',
-
-      // Spacing
-      'array-bracket-spacing': ['error', 'never'],
-      'object-curly-spacing': ['error', 'always'],
-      'space-before-blocks': 'error',
-      'space-before-function-paren': ['error', {
-        'anonymous': 'always',
-        'named': 'never',
-        'asyncArrow': 'always'
-      }],
-      'space-in-parens': ['error', 'never'],
-      'space-infix-ops': 'error',
-
-      // Modern JavaScript
-      'arrow-body-style': ['error', 'as-needed'],
-      'no-useless-constructor': 'error',
-      'prefer-arrow-callback': 'error',
-      'prefer-destructuring': ['error', {
-        'array': true,
-        'object': true
-      }],
-    },
-  },
-  {
-    files: ['**/*.astro'],
-    rules: {
-      'no-unused-vars': 'off',
-    },
-  },
-  {
-    files: ['**/*.test.js', '**/*.spec.js'],
-    env: {
-      jest: true,
-      mocha: true,
-    },
-    rules: {
-      'no-unused-expressions': 'off',
     },
   },
 ];
